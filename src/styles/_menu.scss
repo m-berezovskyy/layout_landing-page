@@ -1,0 +1,130 @@
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 568px;
+  background-color: $color-red;
+  z-index: 100;
+  color: $color-white;
+  font-family: $font-primary;
+
+  transform: translateX(100%);
+  transition: transform $transition-base;
+
+  @include device(tablet) {
+    min-height: 855px;
+  }
+
+  @include device(desktop) {
+    min-height: 700px;
+  }
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px $container-padding-mobile;
+
+    @include device(tablet) {
+      padding: 32px $container-padding-tablet;
+    }
+
+    @include device(desktop) {
+      padding: 32px $container-padding-desktop;
+    }
+  }
+
+  &__header {
+    @include flex-between;
+
+    margin-bottom: 20px;
+
+    @include device(desktop) {
+      margin-bottom: 55px;
+    }
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    @include icon-size(24px);
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 32px;
+
+    @include device(desktop) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 22px;
+    letter-spacing: 2px;
+    line-height: 22px;
+
+    border-bottom: 1px solid transparent;
+    transition:
+      border-color $transition-base,
+      padding-bottom $transition-base;
+
+    @include device(desktop) {
+      &:hover {
+        border-bottom: 1px solid $color-white;
+        padding-bottom: 4px;
+      }
+    }
+  }
+
+  &__contacts {
+    &-item {
+      margin-bottom: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    &-name {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    &-phone {
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  &__call {
+    display: inline-block;
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 12px;
+    text-decoration: none;
+    color: inherit;
+    letter-spacing: 2px;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 4px;
+    transition: border-color $transition-base;
+
+    &:hover {
+      border-color: $color-white;
+    }
+  }
+}

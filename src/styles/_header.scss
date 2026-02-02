@@ -1,0 +1,131 @@
+.header {
+  background-image: url(../images/Background_320.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  min-height: 568px;
+  color: $color-white;
+  font-family: $font-primary;
+
+  @include device(tablet) {
+    min-height: 855px;
+    background-image: url(../images/Background_744.svg);
+  }
+
+  @include device(desktop) {
+    background-image: url(../images/Background_1260.svg);
+  }
+
+  &__top {
+    @include flex-between;
+
+    padding: 25px $container-padding-mobile;
+
+    @include device(tablet) {
+      padding: 50px $container-padding-tablet;
+    }
+
+    @include device(desktop) {
+      padding: 50px $container-padding-desktop;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 0.8;
+    text-decoration: none;
+    color: inherit;
+    letter-spacing: -1.5px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @include device(tablet) {
+      gap: 55px;
+    }
+
+    @include device(desktop) {
+      gap: 55px;
+    }
+  }
+
+  &__info {
+    display: none;
+
+    @include device(desktop) {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 255px;
+      gap: 12px;
+      text-align: right;
+      white-space: nowrap;
+
+      @include fade-toggle(false);
+
+      &:hover {
+        @include fade-toggle(true);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 60px;
+        right: -60px;
+        top: 0;
+      }
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      &-name {
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      &-phone {
+        font-size: 16px;
+        font-weight: 700;
+        color: $color-white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    @include device(tablet) {
+      @include icon-size(32px);
+    }
+
+    @include device(desktop) {
+      @include icon-size(32px);
+    }
+
+    &--burger {
+      &:hover img {
+        content: url('../images/Burger_hover.svg');
+      }
+    }
+
+    &--phone {
+      &:hover ~ .header__info {
+        @include fade-toggle(true);
+      }
+    }
+  }
+}

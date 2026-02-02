@@ -1,3 +1,20 @@
+@import './variables';
+@import './mixins';
+@import './header';
+@import './hero';
+@import './menu';
+@import './hours';
+@import './view';
+@import './explore';
+@import './footer';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  overflow-x: hidden;
 }
