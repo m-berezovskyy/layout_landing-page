@@ -3,6 +3,7 @@
   padding: 100px $container-padding-mobile;
   color: $color-dark;
   font-family: $font-primary;
+  scroll-margin-top: 0;
 
   @include device(tablet) {
     padding: 157px $container-padding-tablet;

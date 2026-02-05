@@ -1,9 +1,9 @@
 .menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 568px;
+  height: 100vh;
   background-color: $color-red;
   z-index: 100;
   color: $color-white;
@@ -11,14 +11,6 @@
 
   transform: translateX(100%);
   transition: transform $transition-base;
-
-  @include device(tablet) {
-    min-height: 855px;
-  }
-
-  @include device(desktop) {
-    min-height: 700px;
-  }
 
   &.is-open {
     transform: translateX(0);

@@ -8,6 +8,11 @@
     />
     <title>Landing Page</title>
     <link
+      rel="icon"
+      href="./images/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link
       rel="stylesheet"
       href="./styles/main.scss"
     />
@@ -34,7 +39,10 @@
     />
   </head>
   <body>
-    <header class="header">
+    <header
+      class="header"
+      id="home"
+    >
       <div class="container">
         <div class="header__top">
           <a
@@ -120,7 +128,7 @@
         <ul class="menu__list">
           <li class="menu__item">
             <a
-              href="#"
+              href="#home"
               class="menu__link"
             >
               HOME
@@ -128,7 +136,7 @@
           </li>
           <li class="menu__item">
             <a
-              href="#"
+              href="#hours"
               class="menu__link"
             >
               ABOUT US
@@ -136,7 +144,7 @@
           </li>
           <li class="menu__item">
             <a
-              href="#"
+              href="#view"
               class="menu__link"
             >
               NOW ON VIEW
@@ -144,7 +152,7 @@
           </li>
           <li class="menu__item">
             <a
-              href="#"
+              href="#explore"
               class="menu__link"
             >
               EXPLORE ONLINE
@@ -152,7 +160,7 @@
           </li>
           <li class="menu__item">
             <a
-              href="#"
+              href="#contacts"
               class="menu__link"
             >
               CONTACTS
@@ -190,7 +198,10 @@
     </nav>
 
     <main class="main">
-      <section class="hours">
+      <section
+        class="hours"
+        id="hours"
+      >
         <div class="container">
           <div class="hours__wrapper">
             <header class="hours__header">
@@ -237,7 +248,10 @@
         </div>
       </section>
 
-      <section class="view">
+      <section
+        class="view"
+        id="view"
+      >
         <div class="container">
           <header class="view__header">
             <h2 class="view__title">Now On View</h2>
@@ -343,7 +357,10 @@
         </div>
       </section>
 
-      <section class="explore">
+      <section
+        class="explore"
+        id="explore"
+      >
         <div class="container">
           <h2 class="explore__title">More to Explore Online</h2>
         </div>
@@ -396,7 +413,10 @@
         </div>
       </section>
 
-      <footer class="footer">
+      <footer
+        class="footer"
+        id="contacts"
+      >
         <div class="container">
           <h2 class="footer__title">Contact us</h2>
 
@@ -458,7 +478,7 @@
                 required
               />
               <input
-                type="text"
+                type="email"
                 class="footer__input"
                 placeholder="Email"
                 required
@@ -466,6 +486,7 @@
               <textarea
                 class="footer__input footer__input--textarea"
                 placeholder="Message"
+                required
               ></textarea>
               <button
                 type="submit"

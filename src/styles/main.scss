@@ -18,3 +18,16 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section,
+footer {
+  scroll-margin-top: 60px;
+
+  @include device(tablet) {
+    scroll-margin-top: 80px;
+  }
+}
